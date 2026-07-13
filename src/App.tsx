@@ -4,6 +4,7 @@ import { Container } from "./components/Container";
 import { Logo } from "./components/Logo";
 import { Menu } from "./components/Menu";
 import { Countdown } from "./components/Countdown";
+import { DefaultInput } from "./components/DefaultInput";
 
 
 export function App() {
@@ -22,8 +23,7 @@ export function App() {
       <Container> 
         <form className="form" action="">
           <div className="formRow">
-            <label htmlFor="task">Task</label>
-            <input type="text" id="task" name="task" />
+            <DefaultInput id="menuInput" type="text" />
           </div>
 
           <div className="formRow">
