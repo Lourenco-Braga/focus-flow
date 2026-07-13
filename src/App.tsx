@@ -6,24 +6,23 @@ import { Menu } from "./components/Menu";
 import { Countdown } from "./components/Countdown";
 import { DefaultInput } from "./components/DefaultInput";
 
-
 export function App() {
   return (
     <>
-      <Container> 
+      <Container>
         <Logo />
       </Container>
-      <Container> 
+      <Container>
         <Menu />
       </Container>
-      <Container> 
+      <Container>
         <Countdown />
       </Container>
 
-      <Container> 
+      <Container>
         <form className="form" action="">
           <div className="formRow">
-            <DefaultInput id="menuInput" type="text" />
+            <DefaultInput labelText="Task" id="menuInput" type="text" placeholder="Digite a Task..." />
           </div>
 
           <div className="formRow">
