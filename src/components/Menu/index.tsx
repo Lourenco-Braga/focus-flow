@@ -1,6 +1,6 @@
 import { House, History, Settings, Sun } from "lucide-react";
 import styles from "./styles.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type AvailableThemes = "dark" | "light";
 
@@ -9,7 +9,15 @@ export function Menu() {
 
   function handleThemeChange(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     event.preventDefault();
+    setTheme(prevTheme => {
+        const nextTheme = prevTheme == "dark" ? "light" : "dark";
+        return nextTheme;
+    });
   }
+
+  useEffect(() => {
+    
+  }, [theme]);
 
   return (
     <nav className={styles.menu}>
