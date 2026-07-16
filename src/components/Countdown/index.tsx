@@ -1,10 +1,13 @@
+import { useContext } from "react";
+import { TaskContext } from '../../contexts/TaskContext'
 import styles from './styles.module.css'
-import type { HomeProps } from '../../pages/Home'
 
-export function Countdown({ state }: HomeProps) {
+export function Countdown() {
+    const taskContext = useContext(TaskContext);
+    console.log(taskContext)
     return (
         <div className={styles.container}>
-            {state.formattedSecondsRemaining}
+            00:00
         </div>
     )
 }
