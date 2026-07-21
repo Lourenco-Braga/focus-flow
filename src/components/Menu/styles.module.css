@@ -1,29 +1,38 @@
 .menu {
-    display: flex;
-    gap: 1.6rem;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .menuLink {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    background: var(--primary);
-    color: var(--text-over-primary);
-    transition: all 0.2s ease-in-out;
-    padding: 1.2rem;
-    border-radius: 0.8rem;
-
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: linear-gradient(180deg,#1F4178 0%,#183667 35%,#142A50 100%);
+  color: var(--text-over-primary);
+  transition: all 0.25s ease-in-out;
+  padding: 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 0.8rem;
 }
 
 .menuLink:hover {
-    filter: brightness(0.8);
+  background: #1c3768;
+  border-color: rgba(96, 165, 250, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
 }
 
 .menuLink svg {
-    width: 2.4rem;
-    height: 2.4rem;
-    transition: all 0.2s ease-in-out;
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: all 0.2s ease-in-out;
+  color: var(--primary-light);
+}
+
+.menuLink:hover svg{
+    color:#A8D2FF;
 }

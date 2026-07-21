@@ -1,33 +1,90 @@
 .button {
-    border: none;
-    background: var(--primary);
-    color: var(--text-over-primary);
+    position: relative;
+    overflow: hidden;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     min-width: 24rem;
-    padding: 0.8rem;
-    border-radius: 0.8rem;
+    padding: 1rem;
+
     margin: 4.8rem 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.8rem;
+
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+
+    color: var(--text-over-primary);
+
+    background: linear-gradient(
+        90deg,
+        #0b308f 0%,
+        #1049b9 45%,
+        #1678e9 100%
+    );
+
+    box-shadow:
+        0 12px 28px rgba(19, 69, 184, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        filter .18s ease;
+}
+
+.button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 45%;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,.12) 0%,
+        rgba(255,255,255,.05) 35%,
+        transparent 100%
+    );
+
+    pointer-events: none;
 }
 
 .button svg {
     width: 3.2rem;
     height: 3.2rem;
+    color: var(--text-over-primary-dark);
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,.20));
 }
 
 .button:hover {
-    filter: brightness(80%);
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 34px rgba(19, 69, 184, 0.30),
+        inset 0 1px 0 rgba(255,255,255,.14);
+
+    filter: brightness(1.03);
 }
 
-.green {
-    background: var(--primary);
-    color: var(--text-over-primary);
+.button:active {
+    transform: translateY(1px);
+
+    box-shadow:
+        0 8px 18px rgba(19, 69, 184, 0.18),
+        inset 0 2px 6px rgba(0,0,0,.10);
 }
 
 .red {
-    background: var(--error);
-    color: var(--text-over-error);
+    background: linear-gradient(
+        90deg,
+        #D92D20 0%,
+        #F04438 100%
+    );
 }
