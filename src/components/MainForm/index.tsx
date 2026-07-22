@@ -63,6 +63,7 @@ export function MainForm() {
           type="text"
           placeholder="Digite o nome da tarefa..."
           ref={taskNameInput}
+          disabled={!!state.activeTask}
         />
       </div>
 

@@ -10,6 +10,11 @@
     transition: all 0.1s ease-in-out ;
 }
 
+.input:disabled {
+    border-bottom-color: var(--text-disabled);
+    color: var(--text-disabled);
+}
+
 .input:focus {
     border-radius: 0.8rem;
     border: 0.2rem solid var(--primary);
