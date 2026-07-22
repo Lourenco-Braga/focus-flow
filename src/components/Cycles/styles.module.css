@@ -14,14 +14,14 @@
 .cycleDot {
     width: 2rem;
     height: 2rem;
-    background-color: var(--primary);
+    background-color: var(--short-cycle);
     border-radius: 50%;
 }
 
 .workTime {
-    background: var(--warning);
+    background: var(--focus-cycle);
 }
 
 .longBreakTime {
-    background: var(--info);
+    background: var(--long-cycle);
 }

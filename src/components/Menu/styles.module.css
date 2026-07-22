@@ -10,29 +10,28 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background: linear-gradient(180deg,#1F4178 0%,#183667 35%,#142A50 100%);
+  background: var(--menu-bg);
   color: var(--text-over-primary);
   transition: all 0.25s ease-in-out;
   padding: 1.3rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--menu-box);
   border-radius: 0.8rem;
 }
 
 .menuLink:hover {
-  background: #1c3768;
-  border-color: rgba(96, 165, 250, 0.35);
+  border-color: var(--menu-border-hover);
   transform: translateY(-2px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--menu-box-hover);
 }
 
 .menuLink svg {
   width: 2.4rem;
   height: 2.4rem;
   transition: all 0.2s ease-in-out;
-  color: var(--primary-light);
+  color: var(--menu-img);
 }
 
 .menuLink:hover svg{
-    color:#A8D2FF;
+    color:var(--menu-img-hover);
 }

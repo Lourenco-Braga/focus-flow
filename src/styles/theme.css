@@ -16,10 +16,25 @@
   --link-color: #60a5fa;
   --link-hover: #93c5fd;
 
+  --focus-cycle: #1b42c2;
+  --short-cycle: #f59e0b;
+  --long-cycle: #22c55e;
+
   --success: #22c55e;
   --warning: #f59e0b;
   --error: #ef4444;
   --info: #38bdf8;
+
+  --logo-name: #1a85ff;
+  --logo-img: #169ace;
+
+  
+  --menu-img: #60cefa;
+  --menu-img-hover: #bfedff;
+  --menu-bg: linear-gradient(180deg,#1F4178 0%,#183667 35%,#142A50 100%);
+  --menu-box: 0 10px 25px rgba(0, 0, 0, 0.25);
+  --menu-box-hover: 0 18px 35px rgba(0, 0, 0, 0.35);
+  --menu-border-hover: rgba(96, 165, 250, 0.35);
 
   --countdown-gradient: linear-gradient(
     180deg,
@@ -54,9 +69,24 @@
   --gray-600: #555f7d;
   --gray-700: #aab3cc;
   --gray-800: #cdd3e1;
-  --gray-900: #e6e9f0;
+  --gray-900: #F5F7FB;
 
-  --text-default: #0a0f1a --text-muted: #272f43;
+  --text-default: #0a0f1a;
+  --text-muted: #272f43;
+
+  --focus-cycle: #042baad5;
+  --short-cycle: #f09d0d;
+  --long-cycle: #15803c;
+
+  --logo-name: #0762ca;
+  --logo-img: #1a85ff;
+
+  --menu-img: #124db9;
+  --menu-img-hover: #5a92fa;
+  --menu-bg: linear-gradient(180deg,#aec7f3 0%,#d5dff0 35%,#b3c9eb 100%);
+  --menu-box: 0 10px 25px rgba(255, 255, 255, 0.25);
+  --menu-box-hover: 0 18px 35px rgba(255, 255, 255, 0.35);
+  --menu-border-hover: rgba(96, 165, 250, 0.35);
 
   --countdown-gradient: linear-gradient(
     180deg,
@@ -64,7 +94,7 @@
     #1E293B 40%,
     #334155 100%
     );
-    --countdown-shadow: none;
+    --countdown-shadow: drop-shadow(0 2px 8px rgba(0,0,0,.04));
 
   --link-color: #0b8a60;
   --link-hover: #065f46;
