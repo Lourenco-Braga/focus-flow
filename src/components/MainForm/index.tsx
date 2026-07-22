@@ -10,12 +10,11 @@ import { getNextCycleType } from "../../utils/getNextCycleType";
 import { formatSecondsToMinutes } from "../../utils/formatSecondsToMinutes";
 
 export function MainForm() {
-
-  const {state, setState} = useTaskContext();
+  const { state, setState } = useTaskContext();
   const taskNameInput = useRef<HTMLInputElement>(null);
 
   const nextCycle = getNextCycle(state.currentCycle);
-  const nextCycleType = getNextCycleType(nextCycle)
+  const nextCycleType = getNextCycleType(nextCycle);
 
   function handleCreateNewTask(event: React.SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -39,19 +38,30 @@ export function MainForm() {
       type: nextCycleType,
     };
 
-    const secondsRemaining = newTask.duration * 60
+    const secondsRemaining = newTask.duration * 60;
 
-    setState(prevState => {
+    setState((prevState) => {
       return {
         ...prevState,
-        config: {...prevState.config},
+        config: { ...prevState.config },
         activeTask: newTask,
         currentCycle: nextCycle,
         secondsRemaining,
         formattedSecondsRemaining: formatSecondsToMinutes(secondsRemaining),
-        tasks: [...prevState.tasks, newTask]
-      }
-    })
+        tasks: [...prevState.tasks, newTask],
+      };
+    });
+  }
+
+  function handleInterruptTask() {
+    setState((prevState) => {
+      return {
+        ...prevState,
+        activeTask: null,
+        secondsRemaining: 0,
+        formattedSecondsRemaining: "00:00",
+      };
+    });
   }
 
   return (
@@ -72,20 +82,32 @@ export function MainForm() {
       </div>
 
       {state.currentCycle > 0 && (
-      <div className="formRow">
-        <Cycles />
-      </div>
+        <div className="formRow">
+          <Cycles />
+        </div>
       )}
 
       <div className="formRow">
         {!state.activeTask ? (
-          <DefaultButton aria-label="Iniciar nova tarefa" title="Iniciar nova tarefa" type="submit" icon={<PlayCircle />} />
+          <DefaultButton
+            aria-label="Iniciar nova tarefa"
+            title="Iniciar nova tarefa"
+            type="submit"
+            icon={<PlayCircle />}
+            key="submit button"
+          />
         ) : (
-           <DefaultButton aria-label="Interromper tarefa atual" title="Interromper tarefa atual" type="button" icon={<StopCircle />} color="red" />
+          <DefaultButton
+            aria-label="Interromper tarefa atual"
+            title="Interromper tarefa atual"
+            type="button"
+            icon={<StopCircle />}
+            color="red"
+            onClick={handleInterruptTask}
+            key="interrupt button"
+          />
         )}
       </div>
     </form>
   );
 }
-
-
