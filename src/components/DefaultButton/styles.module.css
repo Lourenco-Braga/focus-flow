@@ -24,11 +24,9 @@
         #1049b9 45%,
         #1678e9 100%
     );
-
     box-shadow:
-        0 12px 28px rgba(19, 69, 184, 0.22),
+        0 12px 28px rgba(0, 0, 0, 0.233),
         inset 0 1px 0 rgba(255, 255, 255, 0.10);
-
     transition:
         transform .18s ease,
         box-shadow .18s ease,
@@ -37,22 +35,17 @@
 
 .button::before {
     content: "";
-
     position: absolute;
-
     top: 0;
     left: 0;
     right: 0;
-
     height: 45%;
-
     background: linear-gradient(
         180deg,
         rgba(255,255,255,.12) 0%,
         rgba(255,255,255,.05) 35%,
         transparent 100%
     );
-
     pointer-events: none;
 }
 
@@ -65,11 +58,6 @@
 
 .button:hover {
     transform: translateY(-2px);
-
-    box-shadow:
-        0 16px 34px rgba(19, 69, 184, 0.30),
-        inset 0 1px 0 rgba(255,255,255,.14);
-
     filter: brightness(1.03);
 }
 
